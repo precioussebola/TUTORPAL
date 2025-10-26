@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profiles | TutorPal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">TutorPal</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home 🏠</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="tutor-profile.html" class="active">Tutor Profiles 👩‍🏫</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="become-a-tutor.html">Become a Tutor</a></li>
+        <li><a href="how-it-works.html">How it Works?</a></li>
+        <li><a href="booking.html">Bookings</a></li>
+        <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+        <li><a href="student-profile.html"></a>Student Profile</li>
+        <li><a href="school-profile.html">?</a>School Profile</li>
+        <li><a href="profiles.html"></a>Profiles</li>
+        <li><a href="reviews.html"></a>Reviews</li>
+        <li><a href="contact.html"></a>Contacts</li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="profiles-section">
+    <h2><i class="fa-solid fa-users"></i> TutorPal Profiles</h2>
+    <p>Search through our community of tutors, students, and schools.</p>
+
+    <!-- 🔍 Search and Filter -->
+    <div class="search-filter">
+      <input type="text" id="searchInput" placeholder="Search by name, subject, or type...">
+      <select id="filterSelect">
+        <option value="all">All</option>
+        <option value="tutor">Tutors</option>
+        <option value="student">Students</option>
+        <option value="school">Schools</option>
+      </select>
+    </div>
+
+    <!-- 👥 Profiles Grid -->
+    <div class="profiles-grid" id="profilesGrid">
+
+      <div class="profile-card" data-type="tutor" data-name="John Khumalo" data-subject="Mathematics">
+        <img src="https://cdn-icons-png.flaticon.com/512/201/201818.png" alt="Tutor" class="profile-img">
+        <h3>Mr. John Khumalo</h3>
+        <p><strong>Subject:</strong> Mathematics</p>
+        <p><strong>Experience:</strong> 3 years</p>
+        <a href="tutor-profile.html" class="btn">View Profile</a>
+      </div>
+
+      <div class="profile-card" data-type="school" data-name="Bright Future High School" data-subject="Physical Science English">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="School" class="profile-img">
+        <h3>Bright Future High School</h3>
+        <p><strong>Subjects Needed:</strong> Physical Science, English</p>
+        <a href="school-profile.html" class="btn">View Profile</a>
+      </div>
+
+      <div class="profile-card" data-type="student" data-name="Nomvula Dlamini" data-subject="Accounting Business Studies">
+        <img src="https://cdn-icons-png.flaticon.com/512/219/219970.png" alt="Student" class="profile-img">
+        <h3>Nomvula Dlamini</h3>
+        <p><strong>Grade:</strong> 10</p>
+        <p><strong>Focus:</strong> Accounting & Business Studies</p>
+        <a href="student-profile.html" class="btn">View Profile</a>
+      </div>
+
+      <div class="profile-card" data-type="tutor" data-name="Sibongile Ndlovu" data-subject="Life Sciences Geography">
+        <img src="https://cdn-icons-png.flaticon.com/512/201/201824.png" alt="Tutor" class="profile-img">
+        <h3>Ms. Sibongile Ndlovu</h3>
+        <p><strong>Subject:</strong> Life Sciences, Geography</p>
+        <p><strong>Experience:</strong> 5 years</p>
+        <a href="tutor-profile.html" class="btn">View Profile</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 TutorPal | All Rights Reserved</p>
+  </footer>
+
+  <!-- 💻 JavaScript for Search & Filter -->
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const filterSelect = document.getElementById("filterSelect");
+    const profilesGrid = document.getElementById("profilesGrid");
+    const profiles = profilesGrid.getElementsByClassName("profile-card");
+
+    function filterProfiles() {
+      const searchValue = searchInput.value.toLowerCase();
+      const filterValue = filterSelect.value;
+
+      for (let i = 0; i < profiles.length; i++) {
+        const profile = profiles[i];
+        const name = profile.getAttribute("data-name").toLowerCase();
+        const subject = profile.getAttribute("data-subject").toLowerCase();
+        const type = profile.getAttribute("data-type").toLowerCase();
+
+        const matchesSearch = name.includes(searchValue) || subject.includes(searchValue);
+        const matchesFilter = filterValue === "all" || filterValue === type;
+
+        profile.style.display = (matchesSearch && matchesFilter) ? "block" : "none";
+      }
+    }
+
+    searchInput.addEventListener("input", filterProfiles);
+    filterSelect.addEventListener("change", filterProfiles);
+  </script>
+</body>
+</html>
+

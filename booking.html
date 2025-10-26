@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Tutor | TutorPal</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Add icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">TutorPal</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home 🏠</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="tutor-profile.html" class="active">Tutor Profiles 👩‍🏫</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="become-a-tutor.html">Become a Tutor</a></li>
+        <li><a href="how-it-works.html">How it Works?</a></li>
+        <li><a href="booking.html">Bookings</a></li>
+        <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+        <li><a href="student-profile.html"></a>Student Profile</li>
+        <li><a href="school-profile.html">?</a>School Profile</li>
+        <li><a href="profiles.html"></a>Profiles</li>
+        <li><a href="reviews.html"></a>Reviews</li>
+        <li><a href="contact.html"></a>Contacts</li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="booking-section">
+    <h2><i class="fa-solid fa-calendar-check"></i> Book a Tutor</h2>
+    <p>Schedule a session with your preferred tutor. Fill in your details and we’ll confirm your booking.</p>
+
+    <form class="booking-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your full name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="subject">Subject</label>
+      <select id="subject" required>
+        <option value="">Select Subject</option>
+        <option value="Mathematics">Mathematics</option>
+        <option value="English">English</option>
+        <option value="Physical Science">Physical Science</option>
+        <option value="Life Sciences">Life Sciences</option>
+        <option value="Accounting">Accounting</option>
+        <option value="Geography">Geography</option>
+      </select>
+
+      <label for="tutor">Preferred Tutor</label>
+      <input type="text" id="tutor" placeholder="Enter tutor's name (if any)">
+
+      <label for="date">Preferred Date</label>
+      <input type="date" id="date" required>
+
+      <label for="time">Preferred Time</label>
+      <input type="time" id="time" required>
+
+      <label for="notes">Additional Notes</label>
+      <textarea id="notes" rows="4" placeholder="E.g., Student grade level, learning goals, etc."></textarea>
+
+      <button type="submit" class="btn"><i class="fa-solid fa-paper-plane"></i> Submit Booking</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 TutorPal | All Rights Reserved 
+      <a href="terms-and-conditions.html">Terms & Conditions</a></p>
+  </footer>
+</body>
+</html>

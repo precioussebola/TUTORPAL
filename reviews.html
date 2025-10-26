@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TutorPal - Submit a Review</title>
+</head>
+<body>
+  <header>
+    <h1>TutorPal</h1>
+    <p>Submit a review for your tutor and help improve the learning experience.</p>
+  </header>
+
+  <section id="review-form">
+    <h2>Submit Your Review</h2>
+    <form action="#" method="post">
+      <label for="student-name">Your Name:</label><br>
+      <input type="text" id="student-name" name="student-name" required><br><br>
+
+      <label for="tutor-name">Tutor Name:</label><br>
+      <input type="text" id="tutor-name" name="tutor-name" required><br><br>
+
+      <label for="rating">Rating (1-5):</label><br>
+      <select id="rating" name="rating" required>
+        <option value="">Select</option>
+        <option value="1">1 - Poor</option>
+        <option value="2">2 - Fair</option>
+        <option value="3">3 - Good</option>
+        <option value="4">4 - Very Good</option>
+        <option value="5">5 - Excellent</option>
+      </select><br><br>
+
+      <label for="comments">Comments:</label><br>
+      <textarea id="comments" name="comments" rows="5" cols="50" placeholder="Share your experience..." required></textarea><br><br>
+
+      <button type="submit">Submit Review</button>
+    </form>
+  </section>
+
+  </section>
+</body>
+</html>
